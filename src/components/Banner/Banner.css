@@ -1,0 +1,6 @@
+.banner {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("../../images/container-banner.jpeg") no-repeat center center;
+    background-size: cover;
+    padding: 200px 0;
+}

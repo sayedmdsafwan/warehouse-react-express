@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Apple",
+        "img": "https://i.postimg.cc/j5JnLJFP/apple.jpg",
+        "price": 10000,
+        "description": "lorem ipsum",
+        "quantity": 12,
+        "supplier": "Safwan group"
+    },
+    {
+        "name": "Banana",
+        "img": "https://i.postimg.cc/d3279cv0/banana.jpg",
+        "price": 10000,
+        "description": "lorem ipsum",
+        "quantity": 12,
+        "supplier": "Safwan group"
+    },
+    {
+        "name": "BlueBerry",
+        "img": "https://i.postimg.cc/vTsTT29w/berries.jpg",
+        "price": 10000,
+        "description": "lorem ipsum",
+        "quantity": 12,
+        "supplier": "Safwan group"
+    },
+    {
+        "name": "Jackfruit",
+        "img": "https://i.postimg.cc/PqCPRwh9/jackfruit.jpg",
+        "price": 10000,
+        "description": "lorem ipsum",
+        "quantity": 12,
+        "supplier": "Safwan group"
+    },
+    {
+        "name": "Mango",
+        "img": "https://i.postimg.cc/zGXLTQQJ/mango.jpg",
+        "price": 10000,
+        "description": "lorem ipsum",
+        "quantity": 12,
+        "supplier": "Safwan group"
+    },
+    {
+        "name": "Orange",
+        "img": "https://i.postimg.cc/B6DtqfjC/orange.jpg",
+        "price": 10000,
+        "description": "lorem ipsum",
+        "quantity": 12,
+        "supplier": "Safwan group"
+    },
+    {
+        "name": "Pineapple",
+        "img": "https://i.postimg.cc/hGNfWttj/pineapple.jpg",
+        "price": 10000,
+        "description": "lorem ipsum",
+        "quantity": 12,
+        "supplier": "Safwan group"
+    }
+]
