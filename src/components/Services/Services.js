@@ -11,7 +11,7 @@ const Services = () => {
     }, []);
 
     return (
-        <div className="container">
+        <div className="container" id="services">
             <h2 className="text-danger display-6 text-center my-5 text-uppercase">
                 total fruits: {services.length}
             </h2>

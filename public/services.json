@@ -3,7 +3,7 @@
         "name": "Apple",
         "img": "https://i.postimg.cc/j5JnLJFP/apple.jpg",
         "price": 10000,
-        "description": "lorem ipsum",
+        "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide ",
         "quantity": 12,
         "supplier": "Safwan group"
     },
@@ -11,15 +11,15 @@
         "name": "Banana",
         "img": "https://i.postimg.cc/d3279cv0/banana.jpg",
         "price": 10000,
-        "description": "lorem ipsum",
+        "description": "anana is an elongated, edible fruit botanically a berry produced by several kinds of large herbaceous ",
         "quantity": 12,
-        "supplier": "Safwan group"
+        "supplier": "Mikdad group"
     },
     {
         "name": "BlueBerry",
         "img": "https://i.postimg.cc/vTsTT29w/berries.jpg",
         "price": 10000,
-        "description": "lorem ipsum",
+        "description": "Blueberries are a widely distributed and widespread group of perennial flowering plants ",
         "quantity": 12,
         "supplier": "Safwan group"
     },
@@ -27,32 +27,32 @@
         "name": "Jackfruit",
         "img": "https://i.postimg.cc/PqCPRwh9/jackfruit.jpg",
         "price": 10000,
-        "description": "lorem ipsum",
+        "description": "The jackfruit, also known as jack tree, is a species of tree in the fig, mulberry, and breadfruit family.",
         "quantity": 12,
-        "supplier": "Safwan group"
+        "supplier": "Fruits Ltd Bd"
     },
     {
         "name": "Mango",
         "img": "https://i.postimg.cc/zGXLTQQJ/mango.jpg",
         "price": 10000,
-        "description": "lorem ipsum",
+        "description": "A mango is an edible stone fruit produced by the tropical tree Mangifera indica which is believed to have originated from the region pakistan",
         "quantity": 12,
-        "supplier": "Safwan group"
+        "supplier": "New Fruits"
     },
     {
         "name": "Orange",
         "img": "https://i.postimg.cc/B6DtqfjC/orange.jpg",
         "price": 10000,
-        "description": "lorem ipsum",
+        "description": "An orange is a fruit of various citrus species in the family Rutaceae; it primarily refers to Citrus",
         "quantity": 12,
-        "supplier": "Safwan group"
+        "supplier": "Takeaway"
     },
     {
         "name": "Pineapple",
         "img": "https://i.postimg.cc/hGNfWttj/pineapple.jpg",
         "price": 10000,
-        "description": "lorem ipsum",
+        "description": "The pineapple (Ananas comosus) is a tropical plant with an edible fruit; it is the most economically efficient.",
         "quantity": 12,
-        "supplier": "Safwan group"
+        "supplier": "Tesla Fruits"
     }
 ]
