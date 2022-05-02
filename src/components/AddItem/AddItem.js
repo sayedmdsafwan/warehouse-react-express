@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import "./AddItem.css";
 
 const AddItem = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         console.log(data);
         const url = `http://localhost:4000/inventory`;
@@ -18,6 +18,8 @@ const AddItem = () => {
             .then((result) => {
                 console.log(result);
             });
+        alert("Item Added");
+        reset();
     };
 
     return (

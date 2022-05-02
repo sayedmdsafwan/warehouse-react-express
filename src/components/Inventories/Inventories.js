@@ -17,12 +17,6 @@ const ManageInventory = () => {
                     <Service key={service._id} service={service}></Service>
                 ))}
             </div>
-            <button
-                onClick={() => navigate("/additem")}
-                className="btn btn-lg btn-danger d-block mx-auto"
-            >
-                Add Another Item
-            </button>
         </div>
     );
 };

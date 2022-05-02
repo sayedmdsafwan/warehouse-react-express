@@ -57,6 +57,9 @@ const Inventory = () => {
                                 <ListGroupItem>
                                     Price: ${inventory.price}/tons
                                 </ListGroupItem>
+                                <ListGroupItem>
+                                    ID: {inventory._id}
+                                </ListGroupItem>
                             </ListGroup>
                             <Card.Body>
                                 <Card.Link className="btn btn-danger" href="#">
@@ -68,8 +71,8 @@ const Inventory = () => {
                 </div>
                 <div className="col-md-4">
                     <div className="sticky-top py-5">
-                        <h2 className="display-6 mb-4">
-                            You can restock this item
+                        <h2 className="text-capitalize mb-4">
+                            restock this item
                         </h2>
                         <Form onSubmit={handleRestock}>
                             <Form.Group className="mb-3" controlId="restock">

@@ -13,7 +13,8 @@ import Footer from "./components/Footer/Footer";
 import Login from "./components/Login/Login";
 import SignUp from "./components/SignUp/SignUp";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
-import ManageInventory from "./components/ManageInventory/ManageInventory";
+import Inventories from "./components/Inventories/Inventories";
+import ManageItems from "./components/ManageItem/ManageItems";
 
 function App() {
     return (
@@ -32,9 +33,14 @@ function App() {
                         </RequireAuth>
                     }
                 ></Route>
+                <Route path="/inventories" element={<Inventories />}></Route>
                 <Route
-                    path="/manageinventory"
-                    element={<ManageInventory />}
+                    path="/manageitems"
+                    element={
+                        <RequireAuth>
+                            <ManageItems />
+                        </RequireAuth>
+                    }
                 ></Route>
                 <Route
                     path="/additem"

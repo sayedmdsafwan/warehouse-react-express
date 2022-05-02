@@ -17,9 +17,9 @@ const Services = () => {
                     ))
                     .slice(0, 6)}
             </div>
-            <Link to="/manageinventory" className="text-decoration-none">
+            <Link to="/inventories" className="text-decoration-none">
                 <button className="btn btn-lg btn-danger d-block mx-auto mt-4">
-                    Manage Inventory
+                    See All Items
                 </button>
             </Link>
         </div>

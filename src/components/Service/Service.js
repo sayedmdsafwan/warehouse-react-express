@@ -34,7 +34,7 @@ const Service = ({ service }) => {
                         variant="danger"
                         className="w-100 btn-sm"
                     >
-                        Manage This Stock
+                        Manage Stock
                     </Button>
                 </Card.Body>
             </Card>
