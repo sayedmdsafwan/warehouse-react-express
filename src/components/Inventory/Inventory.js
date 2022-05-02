@@ -12,6 +12,7 @@ const Inventory = () => {
         event.preventDefault();
         const reStock = parseInt(event.target.reStock.value);
         console.log(reStock);
+
         /* fetch(`http://localhost:4000/inventory/${id}`, {
             method: "PUT",
             headers: {
@@ -23,6 +24,7 @@ const Inventory = () => {
             .then((data) => {
                 console.log(data);
             }); */
+        event.target.reset();
     };
 
     return (
@@ -50,8 +52,9 @@ const Inventory = () => {
                                 </ListGroupItem>
                             </ListGroup>
                             <Card.Body>
-                                <Card.Link href="#">Card Link</Card.Link>
-                                <Card.Link href="#">Another Link</Card.Link>
+                                <Card.Link className="btn btn-danger" href="#">
+                                    Delivered
+                                </Card.Link>
                             </Card.Body>
                         </Card>
                     </div>

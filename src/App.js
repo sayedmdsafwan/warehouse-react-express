@@ -6,7 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Home from "./components/Home/Home";
 import Blogs from "./components/Blogs/Blogs";
 import Inventory from "./components/Inventory/Inventory";
-import ManageItems from "./components/ManageItems/ManageItems";
 import AddItem from "./components/AddItem/AddItem";
 import MyItems from "./components/MyItems/MyItems";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
@@ -14,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import Login from "./components/Login/Login";
 import SignUp from "./components/SignUp/SignUp";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
+import ManageInventory from "./components/ManageInventory/ManageInventory";
 
 function App() {
     return (
@@ -33,8 +33,8 @@ function App() {
                     }
                 ></Route>
                 <Route
-                    path="/manageitems"
-                    element={<ManageItems></ManageItems>}
+                    path="/manageinventory"
+                    element={<ManageInventory />}
                 ></Route>
                 <Route
                     path="/additem"

@@ -18,7 +18,7 @@ const Service = ({ service }) => {
                     <Card.Title>
                         <h2 className="text-danger">{name}</h2>
                     </Card.Title>
-                    <Card.Text>{description.slice(0, 100)}</Card.Text>
+                    <Card.Text>{description.slice(0, 50)}</Card.Text>
                     <div className="row">
                         <div className="col-md-6">
                             <p>Price: ${price}</p>

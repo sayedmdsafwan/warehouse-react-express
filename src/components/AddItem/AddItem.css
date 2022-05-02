@@ -1,0 +1,8 @@
+.additem form input,
+.additem form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid rgb(197, 192, 192);
+    border-radius: 4px;
+}
