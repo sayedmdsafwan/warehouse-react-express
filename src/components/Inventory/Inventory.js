@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Card, Form, ListGroup, ListGroupItem } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useParams } from "react-router-dom";
+import auth from "../../firebase.init";
 import useInventoryDetail from "../../hooks/useInventoryDetails";
+import Loading from "../Loading/Loading";
 
 const Inventory = () => {
     const { id } = useParams();
+    const [user, loading] = useAuthState(auth);
 
     const [inventory] = useInventoryDetail(id);
 
@@ -27,6 +31,9 @@ const Inventory = () => {
         event.target.reset();
     };
 
+    if (loading) {
+        return <Loading />;
+    }
     return (
         <div className="container py-5">
             <div className="row g-5">

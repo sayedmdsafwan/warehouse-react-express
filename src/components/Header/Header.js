@@ -19,6 +19,9 @@ const Header = () => {
                         <Nav.Link as={Link} to="/">
                             Home
                         </Nav.Link>
+                        <Nav.Link as={Link} to="blogs">
+                            Blogs
+                        </Nav.Link>
                         {user ? (
                             <>
                                 <Nav.Link as={Link} to="additem">
@@ -36,9 +39,6 @@ const Header = () => {
                             </>
                         ) : (
                             <>
-                                <Nav.Link as={Link} to="blog">
-                                    Blog
-                                </Nav.Link>
                                 <Nav.Link as={Link} to="login">
                                     Login
                                 </Nav.Link>

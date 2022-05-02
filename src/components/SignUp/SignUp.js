@@ -7,6 +7,7 @@ import {
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../firebase.init";
+import Loading from "../Loading/Loading";
 
 const SignUp = () => {
     const [createUserWithEmailAndPassword, user, loading, error] =
@@ -35,11 +36,15 @@ const SignUp = () => {
         toast("Check Your Email To Verify");
     };
 
+    if (loading || updating) {
+        return <Loading />;
+    }
+
     return (
         <div
             className="w-25 mx-auto py-5"
             style={{
-                height: "100vh",
+                minHeight: "800px",
             }}
         >
             <h3 className="text-center text-danger">Fruits NINJA</h3>

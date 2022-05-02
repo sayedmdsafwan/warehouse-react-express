@@ -6,6 +6,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { Button, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Loading from "../Loading/Loading";
 
 const Login = () => {
     const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] =
@@ -37,11 +38,15 @@ const Login = () => {
         await signInWithEmailAndPassword(email, password);
     };
 
+    if (loading || loadingGoogle) {
+        return <Loading />;
+    }
+
     return (
         <div
             className="w-25 mx-auto py-5"
             style={{
-                height: "100vh",
+                minHeight: "800px",
             }}
         >
             <h3 className="text-center text-danger">Fruits NINJA</h3>
