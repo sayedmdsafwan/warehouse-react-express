@@ -5,7 +5,7 @@ import {
     useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { Button, Form } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] =
@@ -14,6 +14,8 @@ const Login = () => {
         useSignInWithEmailAndPassword(auth);
 
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     let errorElement;
     if (error) {
@@ -24,8 +26,8 @@ const Login = () => {
         );
     }
 
-    if (user) {
-        navigate("/");
+    if (user || userGoogle) {
+        navigate(from, { replace: true });
     }
 
     const handleSubmit = async (event) => {
@@ -43,9 +45,9 @@ const Login = () => {
             }}
         >
             <h3 className="text-center text-danger">Fruits NINJA</h3>
-            <h2 className="text-center display-6 mb-3">Create an account</h2>
+            <h2 className="text-center display-6 mb-3">Login</h2>
 
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit} className="mb-3">
                 <Form.Group className="mb-3" controlId="BasicEmail">
                     <Form.Control
                         type="email"
@@ -72,6 +74,12 @@ const Login = () => {
                     Login
                 </Button>
             </Form>
+            <button
+                onClick={() => signInWithGoogle()}
+                className="btn btn-primary w-100"
+            >
+                Login With Google
+            </button>
         </div>
     );
 };

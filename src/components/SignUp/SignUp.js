@@ -5,6 +5,7 @@ import {
     useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 const SignUp = () => {
@@ -31,10 +32,8 @@ const SignUp = () => {
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName });
+        toast("Check Your Email To Verify");
     };
-
-    if (user) {
-    }
 
     return (
         <div

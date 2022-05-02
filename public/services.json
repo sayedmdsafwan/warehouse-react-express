@@ -1,5 +1,6 @@
 [
     {
+        "_id": 1,
         "name": "Apple",
         "img": "https://i.postimg.cc/j5JnLJFP/apple.jpg",
         "price": 10000,
@@ -8,6 +9,7 @@
         "supplier": "Safwan group"
     },
     {
+        "_id": 2,
         "name": "Banana",
         "img": "https://i.postimg.cc/d3279cv0/banana.jpg",
         "price": 10000,
@@ -16,6 +18,7 @@
         "supplier": "Mikdad group"
     },
     {
+        "_id": 3,
         "name": "BlueBerry",
         "img": "https://i.postimg.cc/vTsTT29w/berries.jpg",
         "price": 10000,
@@ -24,6 +27,7 @@
         "supplier": "Safwan group"
     },
     {
+        "_id": 4,
         "name": "Jackfruit",
         "img": "https://i.postimg.cc/PqCPRwh9/jackfruit.jpg",
         "price": 10000,
@@ -32,6 +36,7 @@
         "supplier": "Fruits Ltd Bd"
     },
     {
+        "_id": 5,
         "name": "Mango",
         "img": "https://i.postimg.cc/zGXLTQQJ/mango.jpg",
         "price": 10000,
@@ -40,6 +45,7 @@
         "supplier": "New Fruits"
     },
     {
+        "_id": 6,
         "name": "Orange",
         "img": "https://i.postimg.cc/B6DtqfjC/orange.jpg",
         "price": 10000,
@@ -48,6 +54,7 @@
         "supplier": "Takeaway"
     },
     {
+        "_id": 7,
         "name": "Pineapple",
         "img": "https://i.postimg.cc/hGNfWttj/pineapple.jpg",
         "price": 10000,
