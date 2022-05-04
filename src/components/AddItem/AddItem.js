@@ -6,7 +6,7 @@ const AddItem = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         console.log(data);
-        const url = `http://localhost:4000/inventory`;
+        const url = `https://pacific-anchorage-26116.herokuapp.com/inventory`;
         fetch(url, {
             method: "POST",
             headers: {

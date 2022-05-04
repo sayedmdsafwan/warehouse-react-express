@@ -6,7 +6,7 @@ const useServices = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:4000/inventory`)
+        fetch(`https://pacific-anchorage-26116.herokuapp.com/inventory`)
             .then((res) => res.json())
             .then((data) => {
                 setServices(data);

@@ -8,7 +8,7 @@ const ManageInventory = () => {
     const navigate = useNavigate();
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:4000/inventory/${id}`, {
+        fetch(`https://pacific-anchorage-26116.herokuapp.com/inventory/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())

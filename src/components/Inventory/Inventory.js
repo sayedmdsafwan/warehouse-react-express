@@ -11,7 +11,7 @@ const Inventory = () => {
         const newQuantity = parseInt(inventory.quantity) + 1;
         const makeQuantity = newQuantity;
         console.log(makeQuantity);
-        fetch(`http://localhost:4000/inventory/${id}`, {
+        fetch(`https://pacific-anchorage-26116.herokuapp.com/inventory/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
@@ -29,7 +29,7 @@ const Inventory = () => {
         const reStock = parseInt(event.target.reStock.value);
         console.log(reStock);
 
-        /* fetch(`http://localhost:4000/inventory/${id}`, {
+        /* fetch(`https://pacific-anchorage-26116.herokuapp.com/inventory/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
