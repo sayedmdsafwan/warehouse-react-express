@@ -1,16 +1,28 @@
 import React from "react";
 import { Button, Card, Form, ListGroup, ListGroupItem } from "react-bootstrap";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { useParams } from "react-router-dom";
-import auth from "../../firebase.init";
 import useInventoryDetail from "../../hooks/useInventoryDetails";
-import Loading from "../Loading/Loading";
 
 const Inventory = () => {
     const { id } = useParams();
-    const [user, loading] = useAuthState(auth);
-
     const [inventory] = useInventoryDetail(id);
+
+    const handleDelivered = () => {
+        const newQuantity = parseInt(inventory.quantity) + 1;
+        const makeQuantity = newQuantity;
+        console.log(makeQuantity);
+        fetch(`http://localhost:4000/inventory/${id}`, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify({ makeQuantity }),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+            });
+    };
 
     const handleRestock = (event) => {
         event.preventDefault();
@@ -31,9 +43,6 @@ const Inventory = () => {
         event.target.reset();
     };
 
-    if (loading) {
-        return <Loading />;
-    }
     return (
         <div className="container py-5">
             <div className="row g-5">
@@ -52,7 +61,10 @@ const Inventory = () => {
                                     Supplier: {inventory.supplier}
                                 </ListGroupItem>
                                 <ListGroupItem>
-                                    Quantity: {inventory.quantity} tons
+                                    <span className="text-danger">
+                                        {" "}
+                                        Quantity: {inventory.quantity} tons
+                                    </span>
                                 </ListGroupItem>
                                 <ListGroupItem>
                                     Price: ${inventory.price}/tons
@@ -62,7 +74,10 @@ const Inventory = () => {
                                 </ListGroupItem>
                             </ListGroup>
                             <Card.Body>
-                                <Card.Link className="btn btn-danger" href="#">
+                                <Card.Link
+                                    onClick={handleDelivered}
+                                    className="btn btn-danger"
+                                >
                                     Delivered
                                 </Card.Link>
                             </Card.Body>

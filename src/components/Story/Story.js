@@ -5,7 +5,7 @@ import goalImg from "../../images/goal.jpeg";
 const Story = () => {
     return (
         <div className="pt-5">
-            <div className="row">
+            <div className="row border-bottom">
                 <div className="col-md-4">
                     <img src={inventoryImg} alt="" className="img-fluid" />
                 </div>
@@ -43,7 +43,8 @@ const Story = () => {
                     </p>
                 </div>
             </div>
-            <div className="row pt-5">
+
+            <div className="row">
                 <div className="col-md-8 px-5 d-flex justify-content-center flex-column">
                     <h6 className="text-uppercase text-danger">
                         Why choose us?
