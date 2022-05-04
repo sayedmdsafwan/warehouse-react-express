@@ -8,15 +8,21 @@ const ManageInventory = () => {
     const navigate = useNavigate();
 
     const handleDelete = (id) => {
-        fetch(`https://pacific-anchorage-26116.herokuapp.com/inventory/${id}`, {
-            method: "DELETE",
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data);
-                const remaining = services.filter((s) => s._id !== id);
-                setServices(remaining);
-            });
+        const proceed = window.confirm("Are you sure?");
+        if (proceed) {
+            fetch(
+                `https://pacific-anchorage-26116.herokuapp.com/inventory/${id}`,
+                {
+                    method: "DELETE",
+                }
+            )
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                    const remaining = services.filter((s) => s._id !== id);
+                    setServices(remaining);
+                });
+        }
     };
 
     return (
