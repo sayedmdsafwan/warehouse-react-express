@@ -22,9 +22,6 @@ const Header = () => {
                         <Nav.Link as={Link} to="blogs">
                             Blogs
                         </Nav.Link>
-                        <Nav.Link as={Link} to="inventories">
-                            Stock Management
-                        </Nav.Link>
                         {user ? (
                             <>
                                 <Nav.Link as={Link} to="additem">

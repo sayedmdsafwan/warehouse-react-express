@@ -2,10 +2,15 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import useServices from "../../hooks/useServices";
 import { Button, Card } from "react-bootstrap";
+import Loading from "../Loading/Loading";
 
 const ManageInventory = () => {
-    const [services, setServices] = useServices();
+    const [services, setServices, loading] = useServices();
     const navigate = useNavigate();
+
+    if (loading) {
+        return <Loading />;
+    }
 
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure?");
@@ -58,7 +63,7 @@ const ManageInventory = () => {
                                 </p>
                                 <Button
                                     onClick={() => handleDelete(service._id)}
-                                    variant="danger"
+                                    variant="warning"
                                     className="w-100 btn-sm"
                                 >
                                     Delete Item

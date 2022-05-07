@@ -14,14 +14,14 @@ const Blogs = () => {
                 </Card.Header>
                 <Card.Body>
                     <Card.Text>
-                        <p className="lead">
+                        <span className="lead">
                             javaScript is a scripting language on the other hand
                             nodeJS is a javaScript runtime environment. <br />
                             javaScript works on the browsers only. NodeJS can
                             run outside browsers. <br />
                             javaScript mainly works for client side. Besides,
                             NodeJS mainly works for server side.
-                        </p>
+                        </span>
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -34,14 +34,14 @@ const Blogs = () => {
                 </Card.Header>
                 <Card.Body>
                     <Card.Text>
-                        <p className="lead">
+                        <span className="lead">
                             SQL means relational database on the other hand
                             NOSQL means nonrelational database <br />
                             SQL is not good for hierarchical data storage. NOSQL
                             is good for hierarchical data storage. <br />
                             SQL databases are vertically scalable. NOSQL
                             databases are horizontally scalable
-                        </p>
+                        </span>
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -54,7 +54,7 @@ const Blogs = () => {
                 </Card.Header>
                 <Card.Body>
                     <Card.Text>
-                        <p className="lead">
+                        <span className="lead">
                             Purpose of jwt is stateless authentication. <br />
                             The mechanism is jwt verifies the owner of the data.{" "}
                             <br />
@@ -62,7 +62,7 @@ const Blogs = () => {
                             application assigns the user a JWT. Then send
                             requests from users will include the assigned JWT.
                             This is the JWT works
-                        </p>
+                        </span>
                     </Card.Text>
                 </Card.Body>
             </Card>

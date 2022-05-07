@@ -1,11 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import useServices from "../../hooks/useServices";
+import Loading from "../Loading/Loading";
 import Service from "../Service/Service";
 
 const ManageInventory = () => {
-    const [services] = useServices();
+    const [services, setServices, loading] = useServices();
     const navigate = useNavigate();
+
+    if (loading) {
+        return <Loading />;
+    }
 
     return (
         <div className="container pb-5">
