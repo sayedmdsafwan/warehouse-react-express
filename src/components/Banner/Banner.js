@@ -10,7 +10,7 @@ const Banner = () => {
                 </h2>
                 <a href="#services">
                     <button className="btn btn-danger text-uppercase btn-lg">
-                        See all services
+                        See inventory items
                     </button>
                 </a>
             </div>

@@ -5,18 +5,27 @@ import useInventoryDetail from "../../hooks/useInventoryDetails";
 
 const Inventory = () => {
     const { id } = useParams();
-    const [inventory] = useInventoryDetail(id);
+    let [inventory, setInventory] = useInventoryDetail(id);
+    let { img, price, name, description, quantity, _id, supplier } = inventory;
 
     const handleDelivered = () => {
-        const newQuantity = parseInt(inventory.quantity) + 1;
-        const makeQuantity = newQuantity;
-        console.log(makeQuantity);
+        let newQuantity = parseInt(--quantity);
+        let newItem = {
+            img,
+            price,
+            name,
+            description,
+            quantity: newQuantity,
+            supplier,
+        };
+        setInventory(newItem);
+
         fetch(`https://pacific-anchorage-26116.herokuapp.com/inventory/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
             },
-            body: JSON.stringify({ makeQuantity }),
+            body: JSON.stringify(newItem),
         })
             .then((res) => res.json())
             .then((data) => {
@@ -27,19 +36,28 @@ const Inventory = () => {
     const handleRestock = (event) => {
         event.preventDefault();
         const reStock = parseInt(event.target.reStock.value);
-        console.log(reStock);
+        const newQuantity = quantity + reStock;
+        let newItem = {
+            img,
+            price,
+            name,
+            description,
+            quantity: newQuantity,
+            supplier,
+        };
+        setInventory(newItem);
 
-        /* fetch(`https://pacific-anchorage-26116.herokuapp.com/inventory/${id}`, {
+        fetch(`https://pacific-anchorage-26116.herokuapp.com/inventory/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ reStock }),
+            body: JSON.stringify(newItem),
         })
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-            }); */
+            });
         event.target.reset();
     };
 
@@ -68,9 +86,6 @@ const Inventory = () => {
                                 </ListGroupItem>
                                 <ListGroupItem>
                                     Price: ${inventory.price}/tons
-                                </ListGroupItem>
-                                <ListGroupItem>
-                                    ID: {inventory._id}
                                 </ListGroupItem>
                             </ListGroup>
                             <Card.Body>
