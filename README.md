@@ -2,6 +2,8 @@
 
 ### Live Link: [Click Here](https://fruits-ninja.web.app/).
 
+### Server side code link: [Click Here](https://github.com/sayedmdsafwan/warehouse-react-server-side).
+
 ## Project Description: This is a fruit stock management website.
 
 ### StackOverflow Question: [Click Here](https://stackoverflow.com/questions/72115919/cant-increasing-the-value-in-front-end-by-react-data-comes-from-mongodb).
